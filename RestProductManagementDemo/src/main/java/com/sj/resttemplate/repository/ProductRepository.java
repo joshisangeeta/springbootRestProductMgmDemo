@@ -12,6 +12,6 @@ import com.sj.resttemplate.model.Product;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Integer> {
 
-	Optional<Product> findById(int id);
+	Product findById(int id);
 
 }

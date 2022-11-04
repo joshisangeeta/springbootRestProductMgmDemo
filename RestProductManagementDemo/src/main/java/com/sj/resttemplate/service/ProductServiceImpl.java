@@ -51,7 +51,7 @@ public class ProductServiceImpl implements ProductService {
 
         System.out.println("Data is about to be retrieved from database ");
         Product retrievedProduct = null;
-        retrievedProduct = productRepository.findById(id).get();
+        retrievedProduct = productRepository.findById(id);
         System.out.println("Data retrieved from database");
         return retrievedProduct;
     }
@@ -63,6 +63,13 @@ public class ProductServiceImpl implements ProductService {
         System.out.println("Data is retrieved from database ");
         return (List<Product>) productRepository.findAll();
     }
+
+    //just added for test example ,following method
+	@Override
+	public String getProductName() {
+		// TODO Auto-generated method stub
+		return "laptop";
+	}
 
 
 }
